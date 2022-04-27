@@ -11,22 +11,14 @@
 import React from 'react';
 import {
   SafeAreaView,
-  ScrollView,
-  StatusBar,
   StyleSheet,
-  Button,
   Text,
   useColorScheme,
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Colors} from 'react-native/Libraries/NewAppScreen';
+import SignIn from './src/components/signin';
 import Form from './src/components/form';
 
 const Section: React.FC<{
@@ -73,6 +65,10 @@ const App = () => {
       </SafeAreaView>
 
       <Section title="Section" />
+
+      <View style={styles.sectionContainer}>
+        <SignIn />
+      </View>
 
       <View style={styles.sectionContainer}>
         <Form />
